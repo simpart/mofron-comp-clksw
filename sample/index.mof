@@ -1,0 +1,9 @@
+<require>
+    <tag module="mofron-comp-clksw">Switch</tag>
+    <tag module="mofron-comp-button">Button</tag>
+</require>
+
+<Switch>
+    <Button width=1rem>On</Button>
+    <Button width=1rem>OFF</Button>
+</Switch>
