@@ -35,18 +35,36 @@ mf.comp.ClkSw = class extends Switch {
     initDomConts () {
         try {
             super.initDomConts();
-
-	    let clk = (c1) => {
-	        try { c1.switching(); } catch (e) {
-                    console.error(e.stack);
-		    throw e;
-		}
-	    }
-	    this.event(new Click(clk));
         } catch (e) {
             console.error(e.stack);
             throw e;
         }
+    }
+    
+    /**
+     * set click event
+     * 
+     * @type private
+     */
+    beforeRender () {
+        try {
+            super.beforeRender();
+            
+            let clk = (c1,c2,c3) => {
+                try { c3.switching(); } catch (e) {
+                    console.error(e.stack);
+                    throw e;
+                }
+            }
+            
+	    let chd = this.child();
+	    for (let cidx in chd) {
+                chd[cidx].event(new Click([clk,this]));
+	    }
+	} catch (e) {
+	    console.error(e.stack);
+	    throw e;
+	}
     }
 }
 module.exports = mf.comp.ClkSw;
