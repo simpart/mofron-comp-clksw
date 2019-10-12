@@ -28,20 +28,6 @@ mf.comp.ClkSw = class extends Switch {
     }
 
     /**
-     * initialize dom contents
-     * 
-     * @type private
-     */
-    initDomConts () {
-        try {
-            super.initDomConts();
-        } catch (e) {
-            console.error(e.stack);
-            throw e;
-        }
-    }
-    
-    /**
      * set click event
      * 
      * @type private

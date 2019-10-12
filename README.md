@@ -23,8 +23,4 @@ npm install mofron mofron-comp-clksw
     <Button width=1rem>OFF</Button>
 </Switch>
 ```
-# Parameter
-
-|Simple<br>Param | Parameter Name | Type | Description |
-|:--------------:|:---------------|:-----|:------------|
 
